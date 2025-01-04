@@ -21,8 +21,7 @@ class ServiceLogger:
         """Set up a rotating file logger for the service."""
         log_dir = os.path.expanduser("~/apex_logs")
         os.makedirs(log_dir, exist_ok=True)
-        start_time = datetime.now().strftime('%Y%m%d_%H%M%S')
-        log_file_path = os.path.join(log_dir, f"logs/{self.service_name}_{start_time}.log")
+        log_file_path = os.path.join(log_dir, f"logs/{self.service_name}.log")
 
         logger = logging.getLogger(self.service_name)
         logger.setLevel(logging.DEBUG)

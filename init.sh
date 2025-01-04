@@ -36,7 +36,7 @@ WorkingDirectory=$(dirname $SCRIPT_LOCATION)
 Environment="PYTHONUNBUFFERED=1"
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-q.target
 EOL
 
 # Reload Systemd, enable and start the service
